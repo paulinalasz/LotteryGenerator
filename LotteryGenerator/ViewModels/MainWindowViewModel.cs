@@ -19,6 +19,7 @@ namespace LotteryGenerator.ViewModels
         public void Generate() 
         {
             var generatedNumbers = Generator.Generate();
+            GeneratedNumbersViewModel.Update(generatedNumbers);
         }
     }
 }

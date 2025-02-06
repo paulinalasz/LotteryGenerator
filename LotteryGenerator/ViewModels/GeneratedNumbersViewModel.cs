@@ -64,5 +64,15 @@ namespace LotteryGenerator.ViewModels
                 _generatedNumbers.BonusNumber = value;
             }
         }
+
+        public void Update(GeneratedNumbers generatedNumbers)
+        {
+            Number1 = generatedNumbers.Number1;
+            Number2 = generatedNumbers.Number2;
+            Number3 = generatedNumbers.Number3;
+            Number4 = generatedNumbers.Number4;
+            Number5 = generatedNumbers.Number5;
+            BonusNumber = generatedNumbers.BonusNumber;
+        }
     }
 }
