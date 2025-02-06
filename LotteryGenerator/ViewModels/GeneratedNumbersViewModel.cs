@@ -2,7 +2,7 @@
 
 namespace LotteryGenerator.ViewModels
 {
-    public class GeneratedNumbersViewModel
+    public class GeneratedNumbersViewModel : ViewModelBase
     {
         private readonly GeneratedNumbers _generatedNumbers;
 
@@ -17,6 +17,7 @@ namespace LotteryGenerator.ViewModels
             set
             {
                 _generatedNumbers.Number1 = value;
+                OnPropertyChanged(nameof(Number1));
             }
         }
 
@@ -26,6 +27,7 @@ namespace LotteryGenerator.ViewModels
             set
             {
                 _generatedNumbers.Number2 = value;
+                OnPropertyChanged(nameof(Number2));
             }
         }
 
@@ -35,6 +37,7 @@ namespace LotteryGenerator.ViewModels
             set
             {
                 _generatedNumbers.Number3 = value;
+                OnPropertyChanged(nameof(Number3));
             }
         }
 
@@ -44,6 +47,7 @@ namespace LotteryGenerator.ViewModels
             set
             {
                 _generatedNumbers.Number4 = value;
+                OnPropertyChanged(nameof(Number4));
             }
         }
 
@@ -53,6 +57,7 @@ namespace LotteryGenerator.ViewModels
             set
             {
                 _generatedNumbers.Number5 = value;
+                OnPropertyChanged(nameof(Number5));
             }
         }
 
@@ -62,6 +67,7 @@ namespace LotteryGenerator.ViewModels
             set
             {
                 _generatedNumbers.BonusNumber = value;
+                OnPropertyChanged(nameof(BonusNumber));
             }
         }
 

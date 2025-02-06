@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace LotteryGenerator.ViewModels
 {
-    public sealed class MainWindowViewModel
+    public sealed class MainWindowViewModel : ViewModelBase
     {
         public MainWindowViewModel() 
         {
