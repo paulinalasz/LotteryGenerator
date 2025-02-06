@@ -13,7 +13,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Lottery Number Generator"/>
+        <Label Grid.Row="0" Content="Lottery Number Generator" FontWeight="Bold"/>
         <local:GeneratedNumbers Grid.Row="1" DataContext="{Binding GeneratedNumbersViewModel}"/>
         <Button Grid.Row="2" Content="Generate!" Command="{Binding GenerateCommand}"/>
     </Grid>
