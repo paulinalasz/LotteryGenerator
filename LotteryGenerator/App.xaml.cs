@@ -1,4 +1,6 @@
 ﻿using System.Windows;
+using LotteryGenerator.ViewModels;
+using LotteryGenerator.Views;
 
 namespace LotteryGenerator
 {
