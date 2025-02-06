@@ -1,6 +1,4 @@
-﻿using System.Configuration;
-using System.Data;
-using System.Windows;
+﻿using System.Windows;
 
 namespace LotteryGenerator
 {
@@ -9,6 +7,16 @@ namespace LotteryGenerator
     /// </summary>
     public partial class App : Application
     {
+        protected override void OnStartup(StartupEventArgs e)
+        {
+            base.OnStartup(e);
+
+            var view = new MainWindow();
+            var viewModel = new MainWindowViewModel();
+            view.DataContext = viewModel;
+
+            view.ShowDialog();
+        }
     }
 
 }
