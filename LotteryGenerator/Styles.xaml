@@ -4,14 +4,16 @@
     <SolidColorBrush x:Key="LotteryBlue" Color="#007bff" />
     <SolidColorBrush x:Key="LotteryOrange" Color="#FF8C00" />
     <SolidColorBrush x:Key="LotteryYellow" Color="#f7bf2d" />
-    <SolidColorBrush x:Key="Special" Color="#f1c27d       "/>
+    <SolidColorBrush x:Key="Special" Color="#E3F2FD"/>
 
     <!--Label-->
     <Style TargetType="Label">
         <Setter Property="BorderBrush" Value="{StaticResource LotteryYellow}"/>
+        <Setter Property="Background" Value="White"/>
         <Setter Property="BorderThickness" Value="3"/>
         <Setter Property="Foreground" Value="Black"/>
         <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontFamily" Value="Lucida Console"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Margin" Value="5"/>
@@ -21,32 +23,42 @@
         <Setter Property="BorderBrush" Value="{StaticResource LotteryOrange}"/>
         <Setter Property="Margin" Value="15, 5, 5, 5"/>
     </Style>
-    
-    <!--Button-->
+    <!-- Button Style -->
     <Style TargetType="Button">
-        <Setter Property="Background" Value="{DynamicResource LotteryBlue}"/>
+        <Setter Property="Background" Value="{DynamicResource LotteryOrange}"/>
         <Setter Property="Foreground" Value="White"/>
-        <Setter Property="FontSize" Value="30"/>
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Width" Value="200"/>
-        <Setter Property="Height" Value="60"/>
-        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="FontFamily" Value="Lucida Console"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border CornerRadius="5" Background="{TemplateBinding Background}" BorderBrush="Black" BorderThickness="2">
-                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <ControlTemplate TargetType="Button">
+                    <Border Background="{TemplateBinding Background}" 
+                        CornerRadius="30"
+                        SnapsToDevicePixels="True">
+                        <Grid>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Grid>
                     </Border>
+                    <!-- Hover and Pressed Effects -->
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#FFA500"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#E67900"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Background" Value="#8f6c68"/>
+                            <Setter Property="BorderBrush" Value="Gray"/>
+                            <Setter Property="Foreground" Value="#ddd"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
-        <Style.Triggers>
-            <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="{DynamicResource LotteryOrange}"/>
-            </Trigger>
-            <Trigger Property="IsEnabled" Value="False">
-                <Setter Property="Background" Value="#8f6c68"/>
-                <Setter Property="BorderBrush" Value="Gray"/>
-            </Trigger>
-        </Style.Triggers>
     </Style>
 </ResourceDictionary>

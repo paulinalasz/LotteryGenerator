@@ -5,14 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LotteryGenerator.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="600">
-    <Grid>
+        Title="MainWindow" Height="250" Width="600" MinHeight="250" MinWidth="600">
+    <Grid Background="{StaticResource Special}">
         <Grid.RowDefinitions>
+            <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
 
-        <local:GeneratedNumbers Grid.Row="0" DataContext="{Binding GeneratedNumbersViewModel}"/>
-        <Button Grid.Row="1" Content="Generate" Command="{Binding GenerateCommand}"/>
+        <Label Grid.Row="0" Content="Lottery Number Generator"/>
+        <local:GeneratedNumbers Grid.Row="1" DataContext="{Binding GeneratedNumbersViewModel}"/>
+        <Button Grid.Row="2" Content="Generate!" Command="{Binding GenerateCommand}"/>
     </Grid>
 </Window>
