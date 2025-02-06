@@ -6,21 +6,21 @@
              xmlns:local="clr-namespace:LotteryGenerator.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid>
+    <Grid HorizontalAlignment="Center">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0" Content="{Binding Number1}"/>
-        <Label Grid.Row="0" Grid.Column="1" Content="{Binding Number2}"/>
-        <Label Grid.Row="0" Grid.Column="2" Content="{Binding Number3}"/>
-        <Label Grid.Row="0" Grid.Column="3" Content="{Binding Number4}"/>
-        <Label Grid.Row="0" Grid.Column="4" Content="{Binding Number5}"/>
+        <Label Grid.Row="0" Grid.Column="0" Content="{Binding Number1}" Style="{StaticResource NumberLabel}"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="{Binding Number2}" Style="{StaticResource NumberLabel}"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="{Binding Number3}" Style="{StaticResource NumberLabel}"/>
+        <Label Grid.Row="0" Grid.Column="3" Content="{Binding Number4}" Style="{StaticResource NumberLabel}"/>
+        <Label Grid.Row="0" Grid.Column="4" Content="{Binding Number5}" Style="{StaticResource NumberLabel}"/>
         <Label Grid.Row="0" Grid.Column="5" Content="{Binding BonusNumber}" Style="{StaticResource BonusLabel}"/>
     </Grid>
 </UserControl>

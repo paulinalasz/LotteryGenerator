@@ -19,9 +19,17 @@
         <Setter Property="Margin" Value="5"/>
     </Style>
 
-    <Style TargetType="Label" x:Key="BonusLabel" BasedOn="{StaticResource {x:Type Label}}">
-        <Setter Property="BorderBrush" Value="{StaticResource LotteryOrange}"/>
-        <Setter Property="Margin" Value="15, 5, 5, 5"/>
+    <Style TargetType="Label" x:Key="NumberLabel" BasedOn="{StaticResource {x:Type Label}}">
+        <Setter Property="Width" Value="85"/>
+        <Setter Property="Height" Value="60"/>
+    </Style>
+    
+    <Style TargetType="Label" x:Key="BonusLabel" BasedOn="{StaticResource NumberLabel}">
+        <Setter Property="Background" Value="{StaticResource LotteryOrange}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource LotteryYellow}"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="20, 5, 5, 5"/>
     </Style>
     <!-- Button Style -->
     <Style TargetType="Button">

@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:LotteryGenerator.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="250" Width="600" MinHeight="250" MinWidth="600">
+        Title="MainWindow" Height="250" Width="615"
+        ResizeMode="NoResize">
     <Grid Background="{StaticResource Special}">
         <Grid.RowDefinitions>
             <RowDefinition/>
