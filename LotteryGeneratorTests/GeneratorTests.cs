@@ -1,11 +1,16 @@
-﻿namespace LotteryGeneratorTests
+﻿using LotteryGenerator.Helpers;
+using Moq;
+
+namespace LotteryGeneratorTests
 {
     [TestClass]
     public sealed class GeneratorTests
     {
         [TestMethod]
-        public void Test1()
+        public void EachNumberMustBeUniqueInSequence()
         {
+            var mockRandom = new Mock<IRandomNumberGenerator>();
+            //var generator = new Generator();
         }
     }
 }
