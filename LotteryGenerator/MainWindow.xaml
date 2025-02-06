@@ -23,12 +23,12 @@
 
         <Label Grid.Row="0" Grid.Column="6" Content="Bonus!"/>
 
-        <Label Grid.Row="1" Grid.Column="0" Content="Test"/>
-        <Label Grid.Row="1" Grid.Column="1" Content="Test"/>
-        <Label Grid.Row="1" Grid.Column="2" Content="Test"/>
-        <Label Grid.Row="1" Grid.Column="3" Content="Test"/>
-        <Label Grid.Row="1" Grid.Column="4" Content="Test"/>
-        <Label Grid.Row="1" Grid.Column="5" Content="Test"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="{Binding Number1}"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="{Binding Number2}"/>
+        <Label Grid.Row="1" Grid.Column="2" Content="{Binding Number3}"/>
+        <Label Grid.Row="1" Grid.Column="3" Content="{Binding Number4}"/>
+        <Label Grid.Row="1" Grid.Column="4" Content="{Binding Number5}"/>
+        <Label Grid.Row="1" Grid.Column="5" Content="{Binding BonusNumber}"/>
 
         <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Content="Generate" Command="{Binding GenerateCommand}"/>
     </Grid>
