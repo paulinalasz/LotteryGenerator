@@ -7,6 +7,29 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
+        <Label Grid.Row="0" Grid.Column="6" Content="Bonus!"/>
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Test"/>
+        <Label Grid.Row="1" Grid.Column="1" Content="Test"/>
+        <Label Grid.Row="1" Grid.Column="2" Content="Test"/>
+        <Label Grid.Row="1" Grid.Column="3" Content="Test"/>
+        <Label Grid.Row="1" Grid.Column="4" Content="Test"/>
+        <Label Grid.Row="1" Grid.Column="5" Content="Test"/>
+
+        <Button Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="4" Content="Generate"/>
     </Grid>
 </Window>
