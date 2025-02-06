@@ -21,6 +21,6 @@
         <Label Grid.Row="0" Grid.Column="2" Content="{Binding Number3}" Style="{StaticResource NumberLabel}"/>
         <Label Grid.Row="0" Grid.Column="3" Content="{Binding Number4}" Style="{StaticResource NumberLabel}"/>
         <Label Grid.Row="0" Grid.Column="4" Content="{Binding Number5}" Style="{StaticResource NumberLabel}"/>
-        <Label Grid.Row="0" Grid.Column="5" Content="{Binding BonusNumber}" Style="{StaticResource BonusLabel}"/>
+        <Label Grid.Row="0" Grid.Column="5" Content="{Binding BonusNumber}" Style="{StaticResource BonusLabel}" ToolTip="Bonus Number"/>
     </Grid>
 </UserControl>
