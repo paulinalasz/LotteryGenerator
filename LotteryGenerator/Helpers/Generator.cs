@@ -1,6 +1,6 @@
 ﻿using LotteryGenerator.Model;
 
-namespace LotteryGenerator
+namespace LotteryGenerator.Helpers
 {
     public static class Generator
     {
