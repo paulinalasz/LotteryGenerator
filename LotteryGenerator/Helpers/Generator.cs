@@ -4,7 +4,7 @@ namespace LotteryGenerator.Helpers
 {
     public static class Generator
     {
-        private static readonly Random _random = new Random();
+        private static readonly IRandomNumberGenerator _random = new RandomNumberGenerator(new Random());
 
         public static GeneratedNumbers Generate()
         {
