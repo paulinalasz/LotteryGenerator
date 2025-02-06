@@ -12,6 +12,7 @@ namespace LotteryGenerator.ViewModels
         {
             _generator = new Generator(new RandomNumberGenerator(new Random()));
             GeneratedNumbersViewModel = new GeneratedNumbersViewModel(new GeneratedNumbers(0, 0, 0, 0, 0, 0));
+            Generate();
         }
 
         public GeneratedNumbersViewModel GeneratedNumbersViewModel { get; set; }
