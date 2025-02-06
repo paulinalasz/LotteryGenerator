@@ -2,11 +2,16 @@
 
 namespace LotteryGenerator.Helpers
 {
-    public static class Generator
+    public class Generator
     {
-        private static readonly IRandomNumberGenerator _random = new RandomNumberGenerator(new Random());
+        private readonly IRandomNumberGenerator _random;
 
-        public static GeneratedNumbers Generate()
+        public Generator(IRandomNumberGenerator random)
+        {
+            _random = random;
+        }
+
+        public GeneratedNumbers Generate()
         {
             var lotteryNumbers = new List<int>();
 

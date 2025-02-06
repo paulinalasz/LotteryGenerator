@@ -6,8 +6,11 @@ namespace LotteryGenerator.ViewModels
 {
     public sealed class MainWindowViewModel : ViewModelBase
     {
+        private readonly Generator _generator;
+
         public MainWindowViewModel() 
         {
+            _generator = new Generator(new RandomNumberGenerator(new Random()));
             GeneratedNumbersViewModel = new GeneratedNumbersViewModel(new GeneratedNumbers(0, 0, 0, 0, 0, 0));
         }
 
@@ -18,7 +21,7 @@ namespace LotteryGenerator.ViewModels
 
         public void Generate() 
         {
-            var generatedNumbers = Generator.Generate();
+            var generatedNumbers = _generator.Generate();
             GeneratedNumbersViewModel.Update(generatedNumbers);
         }
     }
